@@ -35,11 +35,6 @@
       <i class="now-ui-icons ui-1_check"></i> Hapus
       </button>
       </a>
-      <a href="<?= base_url('home/restore_edit/' .$key->id_jpakaian) ?>">
-      <button class="btn btn-info">
-      <i class="now-ui-icons ui-1_check"></i> Restore
-      </button>
-      </a>
 			</td>	
                   <td>
 		</td>

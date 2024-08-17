@@ -12,7 +12,7 @@
               </div>
               <h4>New here?</h4>
               <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
-              <form class="pt-3" action="<?= base_url('home/aksi_t_user')?>" method="post">
+              <form class="pt-3" action="<?= base_url('home/aksi_t_user')?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                   <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" name="username" placeholder="Username">
                 </div>
@@ -28,15 +28,10 @@
                 <div class="form-group">
                   <input type="text" class="form-control form-control-lg" id="exampleInputNohp1" name="nohp" placeholder="Nohp">
                 </div>
+                <div class="form-group">
+        <input type="file" class="form-control form-control-lg" id="exampleInputFoto1" name="foto">
+    </div>
                 
-                <div class="mb-4">
-                  <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input">
-                      I agree to all Terms & Conditions
-                    </label>
-                  </div>
-                </div>
                 <div class="mt-3">
                   <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
                 </div>

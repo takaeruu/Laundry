@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$captcha_response) {
         echo "Please complete the CAPTCHA.";
     } else {
-        $secret_key = "6LeWmSUqAAAAAK4S-ldt-C6V66shotK8rUTXk25M";
+        $secret_key = "6LdYgCAqAAAAAN8SME6rILvn3TR2fxT1lqxoFIkb";
 
         $url = 'https://www.google.com/recaptcha/api/siteverify';
         $data = [
@@ -31,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 
 
 <!DOCTYPE html>

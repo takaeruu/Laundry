@@ -73,7 +73,7 @@
             <th scope="col">Jenis Pelayanan</th>
             <th scope="col">Berat</th>
             <th scope="col">Harga</th>
-            <th scope="col">Tipe Pemesanan</th>
+            <th scope="col">Tipe Pemesanan  </th>
             <th scope="col">Tanggal</th>
         </tr>
     </thead>

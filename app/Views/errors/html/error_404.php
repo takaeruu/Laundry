@@ -7,17 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>PolluxUI Admin</title>
   <!-- base:css -->
-  <link rel="stylesheet" href="<?= base_url('vendors/typicons/typicons.css')?>">
-  <link rel="stylesheet" href="<?= base_url('vendors/css/vendor.bundle.base.css')?>">
+  <link rel="stylesheet" href="<?= base_url('vendors/typicons/typicons.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('vendors/css/vendor.bundle.base.css') ?>">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="<?= base_url('css/vertical-layout-light/style.css')?>">
+  <link rel="stylesheet" href="<?= base_url('css/vertical-layout-light/style.css') ?>">
   <!-- endinject -->
-  <link rel="shortcut icon" href="<?= base_url('images/favicon.png')?>"/>
-  
-  
+  <link rel="shortcut icon" href="<?= base_url('images/favicon.png') ?>" />
+
+
 </head>
 
 <body>
@@ -28,20 +28,20 @@
   <title>Document</title>
   <!-- Material Design Icons CSS -->
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
-</head>
-  
+  </head>
+
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-          <a class="navbar-brand brand-logo" href="index.html"><img src="https://thumbs2.imgbox.com/88/a2/hrkbLErT_t.png" alt="logo"/></a>
-          
-          
+          <a class="navbar-brand brand-logo" href="index.html"><img src="https://thumbs2.imgbox.com/88/a2/hrkbLErT_t.png" alt="logo" /></a>
+
+
         </div>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        
+
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-date dropdown">
             <a class="nav-link d-flex justify-content-center align-items-center" href="javascript:;">
@@ -58,7 +58,7 @@
               <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                    <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                  <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-normal">David Grey
@@ -70,7 +70,7 @@
               </a>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                    <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                  <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
@@ -82,7 +82,7 @@
               </a>
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
-                    <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                  <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="preview-item-content flex-grow">
                   <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
@@ -130,7 +130,7 @@
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-info">
-                    <i class="typcn typcn-user mx-0"></i> 
+                    <i class="typcn typcn-user mx-0"></i>
                   </div>
                 </div>
                 <div class="preview-item-content">
@@ -198,8 +198,12 @@
         <div id="theme-settings" class="settings-panel">
           <i class="settings-close typcn typcn-times"></i>
           <p class="settings-heading">SIDEBAR SKINS</p>
-          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
-          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+            <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+          </div>
           <p class="settings-heading mt-2">HEADER SKINS</p>
           <div class="color-tiles mx-0 px-4">
             <div class="tiles success"></div>
@@ -364,153 +368,144 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-        <li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/dashboard')?>">
-    <i class="mdi mdi-shopping menu-icon"></i>
-    <span class="menu-title">Dashboard</span>
-  </a>
-</li>
-        <?php
-      if (session()->get('level') == 'Pelanggan' ){
-      ?>
-        <li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/pemesanan')?>">
-    <i class="mdi mdi-shopping menu-icon"></i>
-    <span class="menu-title">Pemesanan</span>
-  </a>
-</li>
-<?php 
-      } else {
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('home/dashboard') ?>">
+              <i class="mdi mdi-shopping menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <?php
+          if (session()->get('level') == 'Pelanggan') {
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/pemesanan') ?>">
+                <i class="mdi mdi-shopping menu-icon"></i>
+                <span class="menu-title">Pemesanan</span>
+              </a>
+            </li>
+          <?php
+          } else {
+          }
+          ?>
 
-      }
-      ?>
+          <?php
+          if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan') {
+          ?>
 
-<?php
-      if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan' ){
-      ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/pemesanan_karyawan') ?>">
+                <i class="mdi mdi-shopping menu-icon"></i>
+                <span class="menu-title">Pemesanan Karyawan</span>
+              </a>
+            </li>
 
-<li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/pemesanan_karyawan')?>">
-    <i class="mdi mdi-shopping menu-icon"></i>
-    <span class="menu-title">Pemesanan Karyawan</span>
-  </a>
-</li>
+          <?php
+          } else {
+          }
+          ?>
 
-<?php 
-      } else {
+          <?php
+          if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan') {
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/transaksi_karyawan') ?>">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Transaksi Karyawan</span>
+              </a>
+            </li>
+          <?php
+          } else {
+          }
+          ?>
 
-      }
-      ?>
+          <?php
+          if (session()->get('level') == 'Pelanggan') {
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/transaksi') ?>">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Transaksi</span>
+              </a>
+            </li>
+          <?php
+          } else {
+          }
+          ?>
 
-<?php
-      if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan'){
-      ?>
-<li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/transaksi_karyawan')?>">
-    <i class="typcn typcn-chart-pie-outline menu-icon"></i>
-    <span class="menu-title">Transaksi Karyawan</span>
-  </a>
-</li>
-<?php 
-      } else {
+          <?php
+          if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan') {
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/laporan') ?>">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Laporan</span>
+              </a>
+            </li>
+          <?php
+          } else {
+          }
+          ?>
 
-      }
-      ?>
+          <?php
+          if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan') {
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/jenis_pakaian') ?>">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Jenis Paket</span>
+              </a>
+            </li>
+          <?php
+          } else {
+          }
+          ?>
 
-<?php
-      if (session()->get('level') == 'Pelanggan' ){
-      ?>
-<li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/transaksi')?>">
-    <i class="typcn typcn-chart-pie-outline menu-icon"></i>
-    <span class="menu-title">Transaksi</span>
-  </a>
-</li>
-<?php 
-      } else {
+          <?php
+          if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan') {
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/jenis_pelayanan') ?>">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Jenis Pelayanan</span>
+              </a>
+            </li>
+          <?php
+          } else {
+          }
+          ?>
 
-      }
-      ?>
+          <?php
+          if (session()->get('level') == 'Admin') {
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/karyawan') ?>">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Karyawan</span>
+              </a>
+            </li>
+          <?php
+          } else {
+          }
+          ?>
 
-<?php
-      if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan'){
-      ?>
-<li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/laporan')?>">
-    <i class="typcn typcn-chart-pie-outline menu-icon"></i>
-    <span class="menu-title">Laporan</span>
-  </a>
-</li>
-<?php 
-      } else {
-
-      }
-      ?>
-
-<?php
-      if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan'){
-      ?>
-<li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/jenis_pakaian')?>">
-    <i class="typcn typcn-chart-pie-outline menu-icon"></i>
-    <span class="menu-title">Jenis Paket</span>
-  </a>
-</li>
-<?php 
-      } else {
-
-      }
-      ?>
-
-<?php
-      if (session()->get('level') == 'Admin' || session()->get('level') == 'Karyawan' ){
-      ?>
-<li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/jenis_pelayanan')?>">
-    <i class="typcn typcn-chart-pie-outline menu-icon"></i>
-    <span class="menu-title">Jenis Pelayanan</span>
-  </a>
-</li>
-<?php 
-      } else {
-
-      }
-      ?>
-
-<?php
-      if (session()->get('level') == 'Admin' ){
-      ?>
-<li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/karyawan')?>">
-    <i class="typcn typcn-chart-pie-outline menu-icon"></i>
-    <span class="menu-title">Karyawan</span>
-  </a>
-</li>
-<?php 
-      } else {
-
-      }
-      ?>
-
-<?php
-      if (session()->get('level') == 'Admin' ){
-      ?>
-<li class="nav-item">
-  <a class="nav-link" href="<?= base_url('home/setting')?>">
-    <i class="typcn typcn-chart-pie-outline menu-icon"></i>
-    <span class="menu-title">Setting</span>
-  </a>
-</li>
-<?php 
-      } else {
-
-      }
-      ?>
+          <?php
+          if (session()->get('level') == 'Admin') {
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('home/setting') ?>">
+                <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+                <span class="menu-title">Setting</span>
+              </a>
+            </li>
+          <?php
+          } else {
+          }
+          ?>
         </ul>
       </nav>
 
-      
-	  <div class="content-wrapper d-flex align-items-center text-center error-page bg-info">
+
+      <div class="content-wrapper d-flex align-items-center text-center error-page bg-info">
         <div class="row flex-grow">
           <div class="col-lg-7 mx-auto text-white">
             <div class="row align-items-center d-flex flex-row">
@@ -524,43 +519,44 @@
             </div>
             <div class="row mt-5">
               <div class="col-12 text-center mt-xl-2">
-                <a class="text-white fw-medium" href="<?= base_url('home/dashboard')?>">Back to home</a>
+                <a class="text-white fw-medium" href="<?= base_url('home/dashboard') ?>">Back to home</a>
               </div>
             </div>
             <div class="row mt-5">
               <div class="col-12 mt-xl-2">
-                <p class="text-white fw-medium text-center">Copyright © 2024  All rights reserved.</p>
+                <p class="text-white fw-medium text-center">Copyright © 2024 All rights reserved.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-	  
-      <!-- partial -->
-      
-      <!-- main-panel ends -->
-    
-    <!-- page-body-wrapper ends -->
-  
-  <!-- container-scroller -->
 
-  <!-- base:js -->
-  <script src="<?= base_url('vendors/js/vendor.bundle.base.js')?>"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page-->
-  <script src="<?= base_url('vendors/chart.js/Chart.min.js')?>"></script>
-  <!-- End plugin js for this page-->
-  <!-- inject:js -->
-  <script src="<?= base_url('js/off-canvas.js')?>"></script>
-  <script src="<?= base_url('js/hoverable-collapse.js')?>"></script>
-  <script src="<?= base_url('js/template.js')?>"></script>
-  <script src="<?= base_url('js/settings.js')?>"></script>
-  <script src="<?= base_url('js/todolist.js')?>"></script>
-  <!-- endinject -->
-  <!-- Custom js for this page-->
-  <script src="<?= base_url('js/dashboard.js')?>"></script>
-  <!-- End custom js for this page-->
-	
- 
+      <!-- partial -->
+
+      <!-- main-panel ends -->
+
+      <!-- page-body-wrapper ends -->
+
+      <!-- container-scroller -->
+
+      <!-- base:js -->
+      <script src="<?= base_url('vendors/js/vendor.bundle.base.js') ?>"></script>
+      <!-- endinject -->
+      <!-- Plugin js for this page-->
+      <script src="<?= base_url('vendors/chart.js/Chart.min.js') ?>"></script>
+      <!-- End plugin js for this page-->
+      <!-- inject:js -->
+      <script src="<?= base_url('js/off-canvas.js') ?>"></script>
+      <script src="<?= base_url('js/hoverable-collapse.js') ?>"></script>
+      <script src="<?= base_url('js/template.js') ?>"></script>
+      <script src="<?= base_url('js/settings.js') ?>"></script>
+      <script src="<?= base_url('js/todolist.js') ?>"></script>
+      <!-- endinject -->
+      <!-- Custom js for this page-->
+      <script src="<?= base_url('js/dashboard.js') ?>"></script>
+      <!-- End custom js for this page-->
+
+
 </body>
+
 </html>

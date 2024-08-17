@@ -11,6 +11,7 @@
                             <th>Kode Pemesanan</th>
                             <th>Tanggal</th>
                             <th>Total Harga</th>
+                            <th>Kembalian</th>
                             <th class="hide-when-print">Aksi</th>
                         </tr>
                     </thead>
@@ -25,6 +26,7 @@
                             <td><?= $key->kode_pemesanan?></td>
                             <td><?= $key->tanggal_nota?></td>
                             <td>Rp.<?= $key->total_harga?>,00</td>
+                            <td>Rp.<?= $key->kembalian?>,00</td>
                             <td class="hide-when-print">
                                 <a href="<?= base_url('home/print_nota/' .$key->id_transaksi) ?>">
                                     <button class="btn btn-info">
