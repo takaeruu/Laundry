@@ -527,4 +527,6 @@ class M_laundry extends Model
             ->get()
             ->getResult();
     }
+
+    
 }

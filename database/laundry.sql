@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : yoga
+ Source Server         : Local
  Source Server Type    : MySQL
  Source Server Version : 100428 (10.4.28-MariaDB)
  Source Host           : localhost:3306
- Source Schema         : laundrybaru
+ Source Schema         : laundry
 
  Target Server Type    : MySQL
  Target Server Version : 100428 (10.4.28-MariaDB)
  File Encoding         : 65001
 
- Date: 13/08/2024 14:01:39
+ Date: 15/08/2024 14:53:43
 */
 
 SET NAMES utf8mb4;
@@ -42,30 +42,6 @@ INSERT INTO `jpakaian` VALUES (3, 'Celana Dalam', NULL, NULL, NULL, NULL, NULL, 
 INSERT INTO `jpakaian` VALUES (6, 'Kemeja', 1, 1, NULL, '2024-07-31 09:33:56', '2024-07-31 09:34:01', NULL);
 
 -- ----------------------------
--- Table structure for jpakaian_backup
--- ----------------------------
-DROP TABLE IF EXISTS `jpakaian_backup`;
-CREATE TABLE `jpakaian_backup`  (
-  `id_jpakaian` int NOT NULL AUTO_INCREMENT,
-  `jenis_pakaian` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `create_by` int NULL DEFAULT NULL,
-  `update_by` int NULL DEFAULT NULL,
-  `delete_by` int NULL DEFAULT NULL,
-  `create_at` datetime NULL DEFAULT NULL,
-  `update_at` datetime NULL DEFAULT NULL,
-  `deleted_at` datetime NULL DEFAULT NULL,
-  PRIMARY KEY (`id_jpakaian`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of jpakaian_backup
--- ----------------------------
-INSERT INTO `jpakaian_backup` VALUES (1, 'Baju Lengan Panjang', NULL, 1, NULL, NULL, '2024-07-31 09:32:43', NULL);
-INSERT INTO `jpakaian_backup` VALUES (2, 'Celana', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `jpakaian_backup` VALUES (3, 'Celana Dalam', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `jpakaian_backup` VALUES (6, 'Kemeja', 1, 1, NULL, '2024-07-31 09:33:56', '2024-07-31 09:34:01', NULL);
-
--- ----------------------------
 -- Table structure for jpelayanan
 -- ----------------------------
 DROP TABLE IF EXISTS `jpelayanan`;
@@ -79,7 +55,7 @@ CREATE TABLE `jpelayanan`  (
   `update_at` datetime NULL DEFAULT NULL,
   `deleted_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id_jpelayanan`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of jpelayanan
@@ -90,32 +66,6 @@ INSERT INTO `jpelayanan` VALUES (3, 'Cuci Basah + Setrika', NULL, NULL, NULL, NU
 INSERT INTO `jpelayanan` VALUES (4, 'Setrika', NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `jpelayanan` VALUES (5, 'Cuci Kering + Setrika', NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `jpelayanan` VALUES (7, 'Cuci Kering Setengah Matang', 1, 1, NULL, '2024-07-31 09:29:00', '2024-07-31 09:29:39', NULL);
-
--- ----------------------------
--- Table structure for jpelayanan_backup
--- ----------------------------
-DROP TABLE IF EXISTS `jpelayanan_backup`;
-CREATE TABLE `jpelayanan_backup`  (
-  `id_jpelayanan` int NOT NULL AUTO_INCREMENT,
-  `jenis_pelayanan` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `create_by` int NULL DEFAULT NULL,
-  `update_by` int NULL DEFAULT NULL,
-  `deleted_by` int NULL DEFAULT NULL,
-  `create_at` datetime NULL DEFAULT NULL,
-  `update_at` datetime NULL DEFAULT NULL,
-  `deleted_at` datetime NULL DEFAULT NULL,
-  PRIMARY KEY (`id_jpelayanan`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of jpelayanan_backup
--- ----------------------------
-INSERT INTO `jpelayanan_backup` VALUES (1, 'Cuci Basah', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `jpelayanan_backup` VALUES (2, 'Cuci Kering', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `jpelayanan_backup` VALUES (3, 'Cuci Basah + Setrika', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `jpelayanan_backup` VALUES (4, 'Setrika', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `jpelayanan_backup` VALUES (5, 'Cuci Kering + Setrika', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `jpelayanan_backup` VALUES (7, 'Cuci Kering Setengah Matang', 1, 1, NULL, '2024-07-31 09:29:00', '2024-07-31 09:29:39', NULL);
 
 -- ----------------------------
 -- Table structure for pemesanan
@@ -138,13 +88,80 @@ CREATE TABLE `pemesanan`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `tipe` enum('Antar & Bayar Nanti','Pickup & Bayar Nanti','Antar & Bayar Langsung','Pickup & Bayar Langsung') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id_pemesanan`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 73 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 79 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pemesanan
 -- ----------------------------
-INSERT INTO `pemesanan` VALUES (70, 17, 1, '6', 6000, 1, 'DiKerjakan', 'PS00000001', 1, NULL, NULL, '2024-08-12 11:30:48', NULL, NULL, 'Antar & Bayar Langsung');
-INSERT INTO `pemesanan` VALUES (71, 8, 2, '65555', 2147483647, 2, 'DiKerjakan', 'PS00000002', 1, NULL, NULL, '2024-08-12 11:43:19', NULL, NULL, 'Pickup & Bayar Langsung');
+INSERT INTO `pemesanan` VALUES (78, 38, 2, '1kg', 20000, 4, 'DiKerjakan', 'PS00000003', 1, 1, NULL, '2024-08-14 08:37:04', '2024-08-15 13:39:47', NULL, 'Pickup & Bayar Nanti');
+
+-- ----------------------------
+-- Table structure for pemesanan_backup
+-- ----------------------------
+DROP TABLE IF EXISTS `pemesanan_backup`;
+CREATE TABLE `pemesanan_backup`  (
+  `id_pemesanan` int NOT NULL,
+  `id_user` int NULL DEFAULT NULL,
+  `id_jpakaian` int NULL DEFAULT NULL,
+  `berat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `harga` int NULL DEFAULT NULL,
+  `id_jpelayanan` int NULL DEFAULT NULL,
+  `status` enum('DiKerjakan','DiAntar','Selesai') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `kode_pemesanan` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `create_by` int NULL DEFAULT NULL,
+  `update_by` int NULL DEFAULT NULL,
+  `deleted_by` int NULL DEFAULT NULL,
+  `create_at` datetime NULL DEFAULT NULL,
+  `update_at` datetime NULL DEFAULT NULL,
+  `deleted_at` datetime NULL DEFAULT NULL,
+  `tipe` enum('Antar & Bayar Nanti','Pickup & Bayar Nanti','Antar & Bayar Langsung','Pickup & Bayar Langsung') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `backup_at` datetime NULL DEFAULT NULL,
+  `backup_by` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id_pemesanan`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of pemesanan_backup
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for permissions
+-- ----------------------------
+DROP TABLE IF EXISTS `permissions`;
+CREATE TABLE `permissions`  (
+  `id_permission` int NOT NULL AUTO_INCREMENT,
+  `level` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `menu_name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `can_access` tinyint(1) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_permission`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 285 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of permissions
+-- ----------------------------
+INSERT INTO `permissions` VALUES (184, 'Pelanggan', 'dashboard', 1);
+INSERT INTO `permissions` VALUES (185, 'Pelanggan', 'pemesanan', 1);
+INSERT INTO `permissions` VALUES (186, 'Pelanggan', 'transaksi', 1);
+INSERT INTO `permissions` VALUES (241, 'Admin', 'dashboard', 1);
+INSERT INTO `permissions` VALUES (242, 'Admin', 'pemesanan_karyawan', 1);
+INSERT INTO `permissions` VALUES (243, 'Admin', 'transaksi_karyawan', 1);
+INSERT INTO `permissions` VALUES (244, 'Admin', 'laporan', 1);
+INSERT INTO `permissions` VALUES (245, 'Admin', 'jenis_paket', 1);
+INSERT INTO `permissions` VALUES (246, 'Admin', 'jenis_pelayanan', 1);
+INSERT INTO `permissions` VALUES (247, 'Admin', 'karyawan', 1);
+INSERT INTO `permissions` VALUES (248, 'Admin', 'setting', 1);
+INSERT INTO `permissions` VALUES (249, 'Admin', 'log_activity', 1);
+INSERT INTO `permissions` VALUES (250, 'Admin', 'restore_data', 1);
+INSERT INTO `permissions` VALUES (251, 'Admin', 'level', 1);
+INSERT INTO `permissions` VALUES (252, 'Admin', 'restore_edit', 1);
+INSERT INTO `permissions` VALUES (277, 'Karyawan', 'dashboard', 1);
+INSERT INTO `permissions` VALUES (278, 'Karyawan', 'pemesanan', 1);
+INSERT INTO `permissions` VALUES (279, 'Karyawan', 'transaksi', 1);
+INSERT INTO `permissions` VALUES (280, 'Karyawan', 'pemesanan_karyawan', 1);
+INSERT INTO `permissions` VALUES (281, 'Karyawan', 'transaksi_karyawan', 1);
+INSERT INTO `permissions` VALUES (282, 'Karyawan', 'laporan', 1);
+INSERT INTO `permissions` VALUES (283, 'Karyawan', 'jenis_paket', 1);
+INSERT INTO `permissions` VALUES (284, 'Karyawan', 'jenis_pelayanan', 1);
 
 -- ----------------------------
 -- Table structure for setting
@@ -163,12 +180,12 @@ CREATE TABLE `setting`  (
   `update_at` datetime NULL DEFAULT NULL,
   `deleted_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id_setting`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of setting
 -- ----------------------------
-INSERT INTO `setting` VALUES (1, 'Family Laundry', 'family_tree.png', 'family_tree.png', 'family_tree.png', NULL, 1, NULL, NULL, '2024-08-07 10:52:03', NULL);
+INSERT INTO `setting` VALUES (1, '', '1722867534_b68fa85da1dcdafcedd8.jpeg', '1722867524_3eb4cf9f54223f002474.png', '1722867534_4b659a2e04aa2671b071.jpeg', NULL, 1, NULL, NULL, '2024-08-05 21:18:54', NULL);
 
 -- ----------------------------
 -- Table structure for transaksi
@@ -191,18 +208,11 @@ CREATE TABLE `transaksi`  (
   `deleted_at` datetime NULL DEFAULT NULL,
   `pelanggan` int NULL DEFAULT NULL,
   PRIMARY KEY (`id_transaksi`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 97 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 99 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of transaksi
 -- ----------------------------
-INSERT INTO `transaksi` VALUES (90, '0124080401', '2024-08-04 20:43:20', 40000, 1, 'PS00000010', 50000, 10000, 1, NULL, NULL, '2024-08-04 20:43:22', NULL, NULL, 15);
-INSERT INTO `transaksi` VALUES (91, '0124080402', '2024-08-04 20:46:39', 250000, 1, 'PS00000004', 300000, 50000, 8, NULL, NULL, '2024-08-04 20:46:42', NULL, NULL, 8);
-INSERT INTO `transaksi` VALUES (92, '0124080501', '2024-08-05 13:47:44', 260000, 1, 'PS00000011', 300000, 40000, 1, NULL, NULL, '2024-08-05 13:48:02', NULL, NULL, 17);
-INSERT INTO `transaksi` VALUES (93, '0124080502', '2024-08-05 13:51:14', 20000, 1, 'PS00000015', 20000, 0, 1, NULL, NULL, '2024-08-05 13:51:18', NULL, NULL, 16);
-INSERT INTO `transaksi` VALUES (94, '0124080503', '2024-08-05 20:38:56', 50000, 1, 'PS00000016', 100000, 50000, 1, NULL, NULL, '2024-08-05 20:39:00', NULL, NULL, 16);
-INSERT INTO `transaksi` VALUES (95, '0124080504', '2024-08-05 21:16:25', 20000, 1, 'PS00000019', 20000, 0, 1, NULL, NULL, '2024-08-05 21:16:27', NULL, NULL, 17);
-INSERT INTO `transaksi` VALUES (96, '0124081101', '2024-08-11 21:35:46', 20000, 1, 'PS00000002', 100000, 80000, 1, NULL, NULL, '2024-08-11 21:35:50', NULL, NULL, 2);
 
 -- ----------------------------
 -- Table structure for user
@@ -220,18 +230,38 @@ CREATE TABLE `user`  (
   `update_by` int NULL DEFAULT NULL,
   `update_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id_user`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 39 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 'admin@gmail.com', 'Admin', '085157206615', 'Batam Centre', '1722492978_ea8f1452bc82faad9ceb.jpeg', 1, '2024-08-01 01:17:44');
-INSERT INTO `user` VALUES (2, 'pelanggan', 'c4ca4238a0b923820dcc509a6f75849b', 'pelanggan@gmail.com', 'Pelanggan', '087216617', 'Nagoya', NULL, NULL, NULL);
+INSERT INTO `user` VALUES (1, 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 'admin@gmail.com', 'Admin', '085157206615', 'Batam Centre', '1722923297_de4fb58b45f1e5c6efc1.jpg', 1, '2024-08-01 01:17:44');
 INSERT INTO `user` VALUES (3, 'karyawan', 'c4ca4238a0b923820dcc509a6f75849b', 'karyawan@gmail.com', 'Karyawan', '0882768281', 'Bengkong', NULL, NULL, NULL);
-INSERT INTO `user` VALUES (8, 'deren', 'c4ca4238a0b923820dcc509a6f75849b', 'deren@gmail.com', 'Pelanggan', '0812712', 'Nagoya', NULL, NULL, NULL);
 INSERT INTO `user` VALUES (15, 'Sterling', 'c4ca4238a0b923820dcc509a6f75849b', 'sterling@gmail.com', 'Pelanggan', '08576288191', 'London', NULL, NULL, NULL);
 INSERT INTO `user` VALUES (16, 'Ahmad', 'c4ca4238a0b923820dcc509a6f75849b', 'ahmad@gmail.com', 'Pelanggan', '0821997212', 'London', NULL, 16, '2024-08-05 21:29:05');
 INSERT INTO `user` VALUES (17, 'Messi2', 'c4ca4238a0b923820dcc509a6f75849b', 'messi2@gmail.com', 'Pelanggan', '911', 'Amerika, Inter Miami Blok M', NULL, NULL, NULL);
+INSERT INTO `user` VALUES (18, 'yoga gautama', 'c4ca4238a0b923820dcc509a6f75849b', 'yoga@gmail.com', 'Pelanggan', '08121121212', 'Golden land', NULL, NULL, NULL);
+INSERT INTO `user` VALUES (19, 'Tinardo', 'c4ca4238a0b923820dcc509a6f75849b', 'tinardo@gmail.com', 'Karyawan', '0871628819191', 'bengkong', NULL, NULL, NULL);
+INSERT INTO `user` VALUES (38, 'Pelanggan', 'c4ca4238a0b923820dcc509a6f75849b', '1wellsonriki@gmail.com', 'Pelanggan', '1', '1', '1723005680_599f22bc45122806ed30.jpg', NULL, NULL);
+
+-- ----------------------------
+-- Table structure for user_activity
+-- ----------------------------
+DROP TABLE IF EXISTS `user_activity`;
+CREATE TABLE `user_activity`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `id_user` int NULL DEFAULT NULL,
+  `menu` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `timestamp` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 230 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of user_activity
+-- ----------------------------
+INSERT INTO `user_activity` VALUES (229, 1, 'Menghapus Activity', NULL, '2024-08-15 14:50:34', '2024-08-15 14:50:34');
 
 -- ----------------------------
 -- Triggers structure for table transaksi
